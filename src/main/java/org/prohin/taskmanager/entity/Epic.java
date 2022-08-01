@@ -1,4 +1,10 @@
+package org.prohin.taskmanager.entity;
+
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity//определил сущность, по умолчанию совпадает с именем класса
@@ -8,18 +14,18 @@ public class Epic {
     @GeneratedValue(strategy= GenerationType.AUTO)// 4 стратегии генирации, может быть AUTO, TABLE, SEQUENCE или IDENTITY:
     private Long id;
     @Column(name="HEADTIPIC_NAME",length = 30, nullable=false, unique=false)// длина,допускает ли столбец значение null или нет,указывает, является ли столбец уникальным
-    private String name;
+    @Getter @Setter private String name;
 
-    private  String description;
+    @Getter @Setter private  String description;
 
-    private  int idTeam;
+    @Getter @Setter private  int idTeam;
 
-    private Date startDatePlan;
+    @Getter @Setter private LocalDate startDatePlan;
 
-    private Date endtDatePlan;
+    @Getter @Setter private LocalDate endtDatePlan;
 
-    private Date startDateFact;
+    @Getter @Setter private LocalDate startDateFact;
 
-    private Date endDateFact;
-  //  Epic (id, name, description, idTeam, startDatePlan, endDatePlan, startDateFact, endDateFact)
+    @Getter @Setter private Date endDateFact;
+
 }
