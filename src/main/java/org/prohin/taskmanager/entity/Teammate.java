@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity//определил сущность, по умолчанию совпадает с именем класса
-@Table(name="TEAMMATE", schema ="TEAMMATE_ID")//название столбца
+@Table(name="TEAMMATE", schema ="TEAMMATE_PEOPLE")//название столбца
 @Data
 public class Teammate {
 

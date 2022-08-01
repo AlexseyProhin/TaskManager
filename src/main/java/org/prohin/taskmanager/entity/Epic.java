@@ -4,7 +4,9 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity//определил сущность, по умолчанию совпадает с именем класса
 @Table(name="EPIC", schema="HEADTOPIC")//название столбца
@@ -17,7 +19,7 @@ public class Epic {
     private String name;
 
     private  String description;
-    @ManyToOne(mappedBy ="TEAM_NAME")
+
     private Team idTeam;//ManyToOne
 
     private LocalDate startDatePlan;
@@ -27,5 +29,8 @@ public class Epic {
     private LocalDate startDateFact;
 
     private LocalDate endDateFact;
+
+    @OneToMany
+    List<Task> tasks = new ArrayList();
 
 }

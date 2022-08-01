@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity//определил сущность, по умолчанию совпадает с именем класса
-@Table(name="TEAM", schema ="TEAM_ID")//название столбца
+@Table(name="TEAM", schema ="Community")//название столбца
 @Data
 public class Team {
     @Id
