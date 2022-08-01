@@ -17,8 +17,8 @@ public class Epic {
     private String name;
 
     private  String description;
-
-    private  int idTeam;
+    @ManyToOne(mappedBy ="TEAM_NAME")
+    private Team idTeam;//ManyToOne
 
     private LocalDate startDatePlan;
 
@@ -26,6 +26,6 @@ public class Epic {
 
     private LocalDate startDateFact;
 
-    private Date endDateFact;
+    private LocalDate endDateFact;
 
 }
