@@ -1,4 +1,4 @@
-package org.prohin.taskmanager;
+package org.prohin.taskmanager.entity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
