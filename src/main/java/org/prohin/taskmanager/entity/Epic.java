@@ -5,7 +5,6 @@ import lombok.Data;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Entity//определил сущность, по умолчанию совпадает с именем класса
@@ -19,8 +18,8 @@ public class Epic {
     private String name;
 
     private  String description;
-
-    private Team idTeam;//ManyToOne
+    @ManyToOne
+    private Team idTeam;
 
     private LocalDate startDatePlan;
 

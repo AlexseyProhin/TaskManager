@@ -18,10 +18,10 @@ public class Task {
     private String description;
 
     private String status;
-
-    private int idEpic;
-
-    private int idTeammate;
+    @ManyToOne
+    private Team idEpic;
+    @ManyToOne
+    private Team idTeammate;
 
     private LocalDate startDatePlan;
 
@@ -33,5 +33,5 @@ public class Task {
 
     private String priority;
 
-    // Task (id, name, description, status, idEpic, idTeammate, startDatePlan, endDatePlan, startDateFact, endDateFact, priority)
+
 }
