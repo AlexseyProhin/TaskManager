@@ -13,5 +13,5 @@ public class Team {
     private Long id;
     @Column(name="TEAM_NAME",length = 30, nullable=false, unique=false)
     private String name;
-    //Team (id, name)
+
 }

@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity//определил сущность, по умолчанию совпадает с именем класса
-@Table(name="TEAMMATE", schema ="TEAMMATE_PEOPLE")//название столбца
+@Table(name="TEAMMATE", schema ="Community")//название столбца
 @Data
 public class Teammate {
 
@@ -20,7 +20,7 @@ public class Teammate {
     private LocalDate dateOfBirth;
 
     private  String posittion;
+    @ManyToOne
+    private Team idTeam;
 
-    private Long idTeam;
-    //(id, firstName, lastName, dateOfBirth, position, idTeam)
 }
