@@ -17,7 +17,12 @@ public class Task {
 
     private String description;
 
-    private String status;
+   private enum Status {
+        OPEN,
+       IN_PROGRESS,
+       CLOSE
+   }
+
     @ManyToOne
     private Team idEpic;
     @ManyToOne
@@ -31,7 +36,11 @@ public class Task {
 
     private LocalDate endDateFact;
 
-    private String priority;
+    private enum Priority {
+        LOW,
+        MEDIUM,
+        HIGH
+    }
 
 
 }
