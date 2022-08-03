@@ -21,7 +21,7 @@ public class Task {
     private Status status;
 
     @ManyToOne
-    private Team idEpic;
+    private Epic idEpic;
     @ManyToOne
     private Team idTeammate;
 
@@ -32,12 +32,8 @@ public class Task {
     private LocalDate startDateFact;
 
     private LocalDate endDateFact;
-
-    private enum Priority {
-        LOW,
-        MEDIUM,
-        HIGH
-    }
+    @Enumerated(EnumType.STRING)
+    private  Priority priority;
 
 
 
