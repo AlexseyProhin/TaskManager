@@ -23,7 +23,7 @@ public class Task {
     @ManyToOne
     private Epic idEpic;
     @ManyToOne
-    private Team idTeammate;
+    private Teammate idTeammate;
 
     private LocalDate startDatePlan;
 
