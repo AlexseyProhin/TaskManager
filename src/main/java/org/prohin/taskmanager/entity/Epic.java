@@ -31,5 +31,8 @@ public class Epic {
 
     @OneToMany
     List<Task> tasks = new ArrayList();
+    @OneToOne
+    private Bdexample myBrithday;
+    
 
 }
